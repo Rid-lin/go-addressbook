@@ -2,6 +2,7 @@ PWD := $(shell pwd)
 VERSION := $(shell git describe --tags)
 BUILD := $(shell git rev-parse --short HEAD)
 PROJECTNAME := $(shell basename $(PWD))
+USERNAME := $(shell git config user.name)
 GOOS := windows
 GOARCH := amd64
 TAG := $(VERSION)_$(GOOS)_$(GOARCH)
@@ -48,8 +49,8 @@ pack:
 	upx --ultra-brute build/$(PROJECTNAME)*
 
 mod_init:
-	go mod init github.com/Rid-lin/$(PROJECTNAME)
-	
+	go mod init github.com/$(USERNAME)/$(PROJECTNAME)
+
 mod:
 	go mod tidy
 	go mod download
