@@ -1,1 +1,1 @@
-# go-addressbook
+# go-template
