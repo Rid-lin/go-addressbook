@@ -47,6 +47,9 @@ run: build
 pack:
 	upx --ultra-brute build/$(PROJECTNAME)*
 
+mod_init:
+	go mod init github.com/Rid-lin/$(PROJECTNAME)
+	
 mod:
 	go mod tidy
 	go mod download
