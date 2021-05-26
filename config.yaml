@@ -1,0 +1,34 @@
+sub_nets:
+  - 192.168.0.0/24
+  - 192.168.1.0/24
+  - 192.168.88.0/24
+  - 10.0.1.0/24
+ignor_list:
+  - 10.0.0.1
+  - ':3128'
+  - '8.8.8.8:53'
+  - 'ff02::'
+friends:
+  - '00:00:00:00:00:00'
+  - '00:00:00:00:00:00'
+  - '00:00:00:00:00:00'
+listen_addr: ':3033'
+flow_port: 2055
+log_level: debug
+name_file_to_log: ./logs/access.log
+assets_path: ./assets
+log_path: ./logs
+config_path: ./config
+mt_addr: 192.168.0.1
+ssh_port: '22'
+mt_user: mikrotik_user
+mt_pass: mikrotik_password
+max_ssh_retries: 25
+ssh_retry_delay: 3
+use_tls: false
+csv: false
+default_quota_hourly: 50
+default_quota_daily: 300
+default_quota_monthly: 9000
+receive_buffer_size_bytes: 212992
+size_one_kilobyte: 1024
